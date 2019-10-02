@@ -16,7 +16,7 @@ const routes: Routes = [
               import('../tab1/tab1.module').then(m => m.Tab1PageModule)
           },
           {
-            path: 'agregar',
+            path: 'agregar/:listaId',
             loadChildren: () =>
               import('../agregar/agregar.module').then(m => m.AgregarPageModule)
           }
@@ -29,6 +29,11 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+          },
+          {
+            path: 'agregar/:listaId',
+            loadChildren: () =>
+              import('../agregar/agregar.module').then(m => m.AgregarPageModule)
           }
         ]
       },
